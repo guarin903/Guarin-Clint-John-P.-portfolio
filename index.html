@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login & Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <video autoplay muted loop id="bgVideo">
+        <source src="backgroundvid.mp4" type="video/mp4">
+    </video>
+
+    <!-- Login Box -->
+    <div class="box" id="loginBox">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <input type="button" value="Login" onclick="login()">
+        <p class="error" id="errorMsg"></p>
+
+        <p>Or login with:</p>
+        <a class="social-btn fb" onclick="socialLogin('Facebook')">Facebook</a>
+        <a class="social-btn gmail" onclick="socialLogin('Gmail')">Gmail</a>
+        <a class="social-btn tiktok" onclick="socialLogin('TikTok')">TikTok</a>
+
+        <p><span class="switch-link" onclick="showForgot()">Forgot Password?</span></p>
+        <p>Don't have an account?  
+            <span class="switch-link" onclick="showSignup()">Sign up</span>
+        </p>
+    </div>
+
+    <!-- Signup Box -->
+    <div class="box" id="signupBox" style="display:none;">
+        <h2>Create Account</h2>
+        <input type="text" id="newUser" placeholder="New Username">
+        <input type="password" id="newPass" placeholder="New Password">
+        <input type="button" value="Sign Up" onclick="signup()">
+        <p class="error" id="signupMsg"></p>
+        <p>Already have an account?  
+            <span class="switch-link" onclick="showLogin()">Login</span>
+        </p>
+    </div>
+
+    <!-- Forgot Password Box -->
+    <div class="box" id="forgotBox" style="display:none;">
+        <h2>Forgot Password</h2>
+        <input type="text" id="forgotUser" placeholder="Enter your username">
+        <input type="button" value="Retrieve Password" onclick="forgotPassword()">
+        <p class="error" id="forgotMsg"></p>
+        <p>Remember your password?  
+            <span class="switch-link" onclick="showLogin()">Login</span>
+        </p>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <video autoplay muted loop id="portfolioVideo">
+            <source src="portfolioBackground.mp4" type="video/mp4">
+        </video>
+
+        <h1>MY PORTFOLIO</h1>
+        <div class="card">
+            <p><strong>CJ Guarin</strong></p>
+            <p>BSIT Student</p>
+            <p>18 years old</p>
+            <p>Birthday: October 3, 2007</p>
+            <p>Address: Brgy Marcos P-7 Magallanes Agusan del Norte</p>
+            <a href="https://www.facebook.com/ryota.021">My Facebook</a>
+            <br><br>
+            <img src="cjguaris.jpg" width="300">
+            <h3>Email:</h3>
+            <a href="mailto:CJGUARIN66@gmail.com">CJGUARIN66@gmail.com</a>
+        </div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

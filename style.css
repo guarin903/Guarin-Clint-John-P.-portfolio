@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#bgVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    object-fit: cover;
+}
+
+.box {
+    width: 320px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+h2 { margin-bottom: 20px; }
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input[type="button"] {
+    background: #1FA2FF;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="button"]:hover { background: #0a7ad6; }
+
+.error { color: #ffcccc; }
+
+.switch-link {
+    color: #00ffea;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+    display:block;
+    margin-top:10px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.social-btn.fb { background:#3b5998; }
+.social-btn.gmail { background:#db4437; }
+.social-btn.tiktok { background:#69c9d0; }
+.social-btn:hover { opacity:0.8; }
+
+#portfolio {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    padding:40px;
+    color:white;
+    backdrop-filter:blur(6px);
+}
+
+#portfolioVideo {
+    position: fixed;
+    top:50%;
+    left:50%;
+    min-width:100%;
+    min-height:100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 12px;
+    width: 80%;
+    margin: 0 auto 30px;
+    box-shadow: 0 0 20px black;
+    text-align: center;
+}
+
+img { border-radius: 10px; border: 3px solid #6b3737; }
+
+a { color: #00ffea; font-weight: bold; }
+a:hover { color: #b3ffff; }
+
+.logout-btn {
+    background:#ff4d4d;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:18px;
+    display:block;
+    margin:20px auto;
+}
